@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml" xmlns="http://www.w3.org/1999/html">
+<head th:replace="common/header :: common-header" />
+
+<div th:replace="common/header :: navbar" />
+    <div class="container">
+
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+
+            <tr>
+                <th>deviceID</th>
+                <th>measurement</th>
+                <th>timestamp</th>
+            </tr>
+
+            </thead>
+
+            <tbody>
+
+            <tr th:each="tempSensorData : ${sensorData}">
+                <td th:text="${tempSensorData.deviceID}" />
+                <td th:text="${tempSensorData.measurement}" />
+                <td th:text="${tempSensorData.timestamp}" />
+            </tr>
+
+            </tbody>
+
+        </table>
+
+</div>
+
+<div th:replace="common/header :: body-bottom-scripts" />
+
+</html>

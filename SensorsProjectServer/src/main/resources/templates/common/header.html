@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head th:fragment="common-header">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>	Projekt z "Projektowanie Sensorów"</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="/css/non-responsive.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+
+    <link rel="icon" href="/image/applie-touch-icon.png" />
+</head>
+
+<body>
+<div th:fragment="navbar">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SENSORS</a>
+            </div>
+            <div id="navbar">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="graphSensorData">CHART</a></li>
+                    <li><a href="#">MY ACCOUNT</a></li>
+                    <li><a th:href="@{/logout}">LOGOUT</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+</div>
+
+<div th:fragment="body-bottom-scripts">
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
